@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5011189413842949706}
   - component: {fileID: 120537332768575179}
   - component: {fileID: 4840366209772266366}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Block-Coison
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,11 +53,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 115f9e6edeb966b46943e5bbb3250e50, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8069229062990925274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +220,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 01871edda24aac747aa96b6926627214, type: 3}
       propertyPath: m_Name
       value: Coison
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 01871edda24aac747aa96b6926627214, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01871edda24aac747aa96b6926627214, type: 3}

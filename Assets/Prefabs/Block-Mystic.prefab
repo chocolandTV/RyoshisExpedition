@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7588896690007368523}
   - component: {fileID: 2140762791961762685}
   - component: {fileID: 1962599238977004327}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Block-Mystic
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,11 +53,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 115f9e6edeb966b46943e5bbb3250e50, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1490617983056105857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -214,6 +214,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f527c9475cd2a36448abf6919a08332b, type: 3}
       propertyPath: m_Name
       value: Mystic
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f527c9475cd2a36448abf6919a08332b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f527c9475cd2a36448abf6919a08332b, type: 3}

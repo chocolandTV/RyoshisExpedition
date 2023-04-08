@@ -5,18 +5,23 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject currentBlock {get;set;}
+    public LayerMask ground;
     // Start is called before the first frame update
     void Start()
     {
         
     }
-
+    private bool isGrounded()
+    {
+        return (currentBlock.GetComponent<Rigidbody2D>().IsTouchingLayers(LayerMask.GetMask("Block")));
+    
+    }
     // Update is called once per frame
     void Update()
     {
         if(currentBlock != null)
         {
-            if(currentBlock.GetComponent<Rigidbody2D>().velocity.y < 0.05f)
+            if(isGrounded())
             {
                 currentBlock = BlockSpawnController.Instance.SpawnBlock();
             }

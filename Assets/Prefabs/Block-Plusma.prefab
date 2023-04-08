@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 465571157205849541}
   - component: {fileID: 7713804422914241584}
   - component: {fileID: 6309250557772110580}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Block-Plusma
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,11 +53,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 115f9e6edeb966b46943e5bbb3250e50, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5560676040658193916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -212,6 +212,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: abb2c9296a7ddb04f9b91f6df7ce5775, type: 3}
       propertyPath: m_Name
       value: Plusma
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: abb2c9296a7ddb04f9b91f6df7ce5775, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abb2c9296a7ddb04f9b91f6df7ce5775, type: 3}

@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3b28bd2c26672498d09873c8f4089e, type: 3}
   m_Name: GameSetting
   m_EditorClassIdentifier: 
-  spawningObjectsList: []
+  spawningObjectsList:
+  - {fileID: 4675990974956436153, guid: 4bb7c3bc6d575eb4db3a9b5d4270f704, type: 3}
+  - {fileID: 2271160255281826519, guid: 6f8b6059c4290c341aba6d0fa352352c, type: 3}
+  - {fileID: 4780018125786574311, guid: 0616d319b6db93e409e40323361c176a, type: 3}
+  - {fileID: 683444167686250669, guid: 0908678456ba7334e8ff31fca0e40b68, type: 3}
+  - {fileID: 4735216189888735629, guid: 6cef634700ae97c4d83bfc856974e71c, type: 3}
+  - {fileID: 4978069208869940230, guid: 9d8fe3f2444f3754c8c77af334febe39, type: 3}
+  - {fileID: 6186386175821746655, guid: cb5c75a2ac6417740b040a3ca7901b17, type: 3}
+  - {fileID: 6289043581608543367, guid: 061ab2e32b497ea4a802da9b247692d0, type: 3}
+  - {fileID: 1581148033702971035, guid: 4ebd1b796a96ebf438e534ae313c1da2, type: 3}
+  - {fileID: 8668329788537919227, guid: d285a2e067c5cdd4fa93d4a0f52c4bdd, type: 3}
+  blockChance: 
   ObjectSpeed: 5
   EnergyChance: 28

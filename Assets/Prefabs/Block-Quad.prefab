@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4460412062781832880}
   - component: {fileID: 7106286730677388654}
   - component: {fileID: 9196712639096243701}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Block-Quad
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,11 +51,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 115f9e6edeb966b46943e5bbb3250e50, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7106286730677388654
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,6 +150,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 27922d93b20dc2a46acc75e0efc998c5, type: 3}
       propertyPath: m_Name
       value: Quad
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 27922d93b20dc2a46acc75e0efc998c5, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27922d93b20dc2a46acc75e0efc998c5, type: 3}

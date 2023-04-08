@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6108587248745514959}
   - component: {fileID: 3526621663416315193}
   - component: {fileID: 5838934701578534018}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Block-Flatia
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,11 +51,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 115f9e6edeb966b46943e5bbb3250e50, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &3526621663416315193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -154,6 +154,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cc805e5708cab884ab8a426610bbf0ac, type: 3}
       propertyPath: m_Name
       value: Flatia
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc805e5708cab884ab8a426610bbf0ac, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc805e5708cab884ab8a426610bbf0ac, type: 3}
