@@ -18,22 +18,41 @@ public class BlockSpawnController : MonoBehaviour
         Instance = this;
 
     }
-    private void Start() {
+    private void Start()
+    {
         SpawnZoneObjectCount = 0;
     }
     // Start is called before the first frame update
     public GameObject SpawnBlock()
     {
-        if(Physics2D.OverlapBox(spawnCollider.transform.position,spawnCollider.transform.localScale,360f,LayerMask.GetMask("Block")));
-        // get RandomBlock with Chance
-        GameObject _temp = _gameSettings.spawningObjectsList[Random.Range(0, _gameSettings.spawningObjectsList.Length)];
-        Vector3 _pos = RandomPointInBounds(spawnCollider.bounds, _temp.GetComponent<BoxCollider2D>().bounds);
-        
-        GameObject _newblock = Instantiate(_temp, _pos, Quaternion.identity);
+
+        if (Physics2D.OverlapBoxAll(spawnCollider.transform.position, Vector2.one, 360f, LayerMask.GetMask("Block")).Length >= 3)
+        {
+            GameManager.Instance.isGameOver = true;
+        }
+        GameObject _obj = getRandomBlockItem();
+        Vector3 _pos = RandomPointInBounds(spawnCollider.bounds, _obj.GetComponent<BoxCollider2D>().bounds);
+
+        GameObject _newblock = Instantiate(_obj, _pos, Quaternion.identity);
         return _newblock;
-
-        // get Energy ?!
-
+    }
+    private GameObject getRandomBlockItem()
+    {
+        GameObject _object = _gameSettings.spawningObjectsList[Random.Range(0, _gameSettings.spawningObjectsList.Length)];
+        int randomChance = Random.Range(1,SumBlockChance());
+        int counter =0;
+        // 22 
+        for (int i = 0; i < _gameSettings.blockChance.Length; i++)
+        {
+            if( randomChance < _gameSettings.blockChance[i] + counter){
+                
+                
+                return _gameSettings.spawningObjectsList[i];}
+            else
+                counter +=_gameSettings.blockChance[i];
+        }
+        
+        return _object;
     }
     private static Vector3 RandomPointInBounds(Bounds bounds, Bounds newObject)
     {
@@ -44,7 +63,16 @@ public class BlockSpawnController : MonoBehaviour
             0
         );
     }
-    
+   
+    private int SumBlockChance()
+    {
+        int sum = 0;
+        foreach (int x in _gameSettings.blockChance)
+        {
+            sum += x;
+        }
+        return sum;
+    }
     private void OnDestroy()
     {
         if (Instance == this) Instance = null;
