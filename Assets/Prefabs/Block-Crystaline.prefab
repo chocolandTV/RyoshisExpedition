@@ -80,6 +80,7 @@ MonoBehaviour:
   - {x: 2, y: 4, z: 0}
   - {x: -1, y: 4, z: 0}
   - {x: -2, y: 4, z: 0}
+  EnergyObject: {fileID: 8897905891041813700, guid: 91a1d5a5caec27241b6643dac7cb7f88, type: 3}
 --- !u!61 &3442918590015739154
 BoxCollider2D:
   m_ObjectHideFlags: 0

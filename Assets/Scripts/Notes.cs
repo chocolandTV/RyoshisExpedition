@@ -5,6 +5,16 @@ using UnityEngine;
 public class Notes : MonoBehaviour
 {
     public List<Vector3> NotePosition  = new List<Vector3>();
+    [field:SerializeField] public GameObject EnergyObject;
+    private void Start() {
+        foreach (Vector3 x in NotePosition)
+        {
+            GameObject _obj = Instantiate(EnergyObject, x, Quaternion.identity);
+            _obj.gameObject.transform.parent = this.transform;
+            _obj.transform.position = gameObject.transform.position + x;
+        }
+        Destroy(this);
+    }
     private void OnDrawGizmos() {
         if(NotePosition != null)
         {

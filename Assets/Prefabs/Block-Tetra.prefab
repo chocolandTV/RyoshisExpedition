@@ -98,6 +98,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: -1, y: 0, z: 0}
   - {x: -2, y: 0, z: 0}
+  EnergyObject: {fileID: 8897905891041813700, guid: 91a1d5a5caec27241b6643dac7cb7f88, type: 3}
 --- !u!1001 &1937376827458105571
 PrefabInstance:
   m_ObjectHideFlags: 0

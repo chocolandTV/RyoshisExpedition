@@ -11,4 +11,5 @@ public class GameSettings : ScriptableObject
    [Range(0,100)]
    public int EnergyChance;
    
+   
 }
