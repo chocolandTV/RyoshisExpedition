@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameSettings : ScriptableObject
 {
    public GameObject[] spawningObjectsList;
+    [Range(0,100)]
+   public int[] blockChance;
    public float ObjectSpeed;
    [Range(0,100)]
    public int EnergyChance;

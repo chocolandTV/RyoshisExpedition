@@ -11,7 +11,9 @@ public class Notes : MonoBehaviour
             for (int i = 0; i < NotePosition.Count; i++)
             {
                 Gizmos.color = Color.blue;
-                Gizmos.DrawSphere(NotePosition[i],0.1f);
+                Gizmos.DrawCube(NotePosition[i] + transform.position,Vector3.one *1f);
+                Gizmos.color = Color.black;
+                Gizmos.DrawSphere(NotePosition[i] + transform.position,0.1f);
             }
         }
     }
