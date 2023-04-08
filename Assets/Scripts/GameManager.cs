@@ -41,4 +41,8 @@ public class GameManager : MonoBehaviour
             currentBlock = BlockSpawnController.Instance.SpawnBlock();
         }
     }
+    public void OnPause()
+    {
+        
+    }
 }

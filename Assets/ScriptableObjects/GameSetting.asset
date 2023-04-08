@@ -23,6 +23,6 @@ MonoBehaviour:
   - {fileID: 6289043581608543367, guid: 061ab2e32b497ea4a802da9b247692d0, type: 3}
   - {fileID: 1581148033702971035, guid: 4ebd1b796a96ebf438e534ae313c1da2, type: 3}
   - {fileID: 8668329788537919227, guid: d285a2e067c5cdd4fa93d4a0f52c4bdd, type: 3}
-  blockChance: 
+  blockChance: 0a0000000a0000000a000000050000000a0000000a0000000a0000000a0000000a0000000a000000
   ObjectSpeed: 5
   EnergyChance: 28
