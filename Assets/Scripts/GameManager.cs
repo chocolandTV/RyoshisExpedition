@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject currentBlock {get;set;}
+    
     // public LayerMask ground;
     public bool isGameOver {get;set;}
+   
     public static GameManager Instance;
     private void Awake()
     {
@@ -23,24 +24,13 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    private bool isGrounded()
-    {
-        return (currentBlock.GetComponent<Rigidbody2D>().IsTouchingLayers(LayerMask.GetMask("Ground")));
     
-    }
     // Update is called once per frame
-    void Update()
-    {
-        if(currentBlock != null)
-        {
-            if(isGrounded())
-            {
-                currentBlock = BlockSpawnController.Instance.SpawnBlock();
-            }
-        }else{
-            currentBlock = BlockSpawnController.Instance.SpawnBlock();
-        }
-    }
+    // private void Update() {
+        
+        
+    // }
+    
     public void OnPause()
     {
         

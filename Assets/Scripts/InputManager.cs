@@ -18,7 +18,16 @@ public class InputManager : MonoBehaviour
             PlayerController.Instance.PlayerDirectionY = 0f;
         }
     }
-  
+    public void OnBlockChange(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            BlockSpawnController.Instance.SpawnNewBlock();
+            
+        }
+        
+        
+    }
     public void OnPause(InputAction.CallbackContext context)
     {
         if(context.performed)

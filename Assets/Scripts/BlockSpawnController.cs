@@ -8,6 +8,7 @@ public class BlockSpawnController : MonoBehaviour
     [field: SerializeField] private GameSettings _gameSettings;
     public static BlockSpawnController Instance;
     public static int SpawnZoneObjectCount;
+    public GameObject currentBlock {get;set;}
     private void Awake()
     {
         if (Instance != null)
@@ -21,14 +22,34 @@ public class BlockSpawnController : MonoBehaviour
     private void Start()
     {
         SpawnZoneObjectCount = 0;
+        SpawnNewBlock();
     }
     // Start is called before the first frame update
-    public GameObject SpawnBlock()
+    public void SpawnNewBlock()
+    {
+        // if(currentBlock != null)
+        // {
+        //     if(isGrounded())
+        //     {
+        //         currentBlock = SpawnBlock();
+        //     }
+           
+        // }else{
+            currentBlock = SpawnBlock();
+        // }
+    }
+    // private bool isGrounded()
+    // {
+    //     return (currentBlock.GetComponent<Rigidbody2D>().IsTouchingLayers(LayerMask.GetMask("Block")));
+    
+    // }
+    private GameObject SpawnBlock()
     {
 
         if (Physics2D.OverlapBoxAll(spawnCollider.transform.position, Vector2.one, 360f, LayerMask.GetMask("Block")).Length >= 3)
         {
             GameManager.Instance.isGameOver = true;
+            Debug.Log("GAME OVER");
         }
         GameObject _obj = getRandomBlockItem();
         Vector3 _pos = RandomPointInBounds(spawnCollider.bounds, _obj.GetComponent<BoxCollider2D>().bounds);

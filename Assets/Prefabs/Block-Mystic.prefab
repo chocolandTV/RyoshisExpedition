@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7588896690007368523}
   - component: {fileID: 2140762791961762685}
   - component: {fileID: 1962599238977004327}
+  - component: {fileID: 6626233678555727180}
   m_Layer: 3
   m_Name: Block-Mystic
   m_TagString: Block
@@ -45,7 +46,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4978069208869940230}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -54,9 +55,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 115f9e6edeb966b46943e5bbb3250e50, type: 2}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1490617983056105857
 BoxCollider2D:
@@ -161,6 +162,18 @@ MonoBehaviour:
   - {x: -2, y: 1, z: 0}
   - {x: -2, y: 2, z: 0}
   EnergyObject: {fileID: 8897905891041813700, guid: 91a1d5a5caec27241b6643dac7cb7f88, type: 3}
+--- !u!114 &6626233678555727180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4978069208869940230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed92e4a024d0d542afa7b13a996480f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4595763441355470041
 PrefabInstance:
   m_ObjectHideFlags: 0

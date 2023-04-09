@@ -9,9 +9,10 @@ public class PlayerController : MonoBehaviour
     public float PlayerDirectionY{get;set;}
     public bool isSpeedup {get;set;}
     private float Gravity = -9.81f;
+    [field:SerializeField] private GameSettings _gameSettings;
     public void Rotate()
     {
-        GameManager.Instance.currentBlock.transform.Rotate(0, 0, 90);
+        BlockSpawnController.Instance.currentBlock.transform.Rotate(0, 0, 90);
     }
     private void Awake() {
         if(Instance != null)
@@ -23,12 +24,12 @@ public class PlayerController : MonoBehaviour
     }
     private void Move()
     {
-        if(GameManager.Instance.currentBlock != null){
-            Vector2 pos = new Vector2(PlayerDirectionX, PlayerDirectionY+ Gravity);
-            Vector2 objPos = new Vector2(GameManager.Instance.currentBlock.transform.position.x, GameManager.Instance.currentBlock.transform.position.y);
-            GameManager.Instance.currentBlock.GetComponent<Rigidbody2D>().MovePosition((pos* Time.fixedDeltaTime) + objPos);
-            
-        
+        if(BlockSpawnController.Instance.currentBlock != null){
+            // Vector2 pos = new Vector2(PlayerDirectionX*Speed,BlockSpawnController.Instance.currentBlock.GetComponent<Rigidbody2D>().velocity.y);
+            // Vector2 objPos = new Vector2(BlockSpawnController.Instance.currentBlock.transform.position.x, BlockSpawnController.Instance.currentBlock.transform.position.y);
+            // BlockSpawnController.Instance.currentBlock.GetComponent<Rigidbody2D>().MovePosition((pos* Time.fixedDeltaTime) + objPos);
+            BlockSpawnController.Instance.currentBlock.GetComponent<Rigidbody2D>().AddForce(transform.right *PlayerDirectionX * _gameSettings.ObjectSpeed);
+            BlockSpawnController.Instance.currentBlock.GetComponent<Rigidbody2D>().AddForce(transform.up *-(PlayerDirectionY * _gameSettings.ObjectSpeed),ForceMode2D.Impulse);
         }
     }
     // Start is called before the first frame update

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6580592986040815047}
   - component: {fileID: 5994849281775603748}
   - component: {fileID: 649455995329090895}
+  - component: {fileID: -7942565090272947790}
   m_Layer: 3
   m_Name: Block-Draconic
   m_TagString: Block
@@ -43,7 +44,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683444167686250669}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -52,9 +53,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 115f9e6edeb966b46943e5bbb3250e50, type: 2}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5994849281775603748
 MonoBehaviour:
@@ -101,6 +102,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0059354, y: 1.989136}
   m_EdgeRadius: 0
+--- !u!114 &-7942565090272947790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683444167686250669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed92e4a024d0d542afa7b13a996480f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7182840338263233215
 PrefabInstance:
   m_ObjectHideFlags: 0
