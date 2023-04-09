@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         if(GameManager.Instance.currentBlock != null){
             Vector2 pos = new Vector2(PlayerDirectionX, PlayerDirectionY+ Gravity);
             Vector2 objPos = new Vector2(GameManager.Instance.currentBlock.transform.position.x, GameManager.Instance.currentBlock.transform.position.y);
-            GameManager.Instance.currentBlock.GetComponent<Rigidbody2D>().MovePosition(pos + objPos* Time.fixedDeltaTime);
+            GameManager.Instance.currentBlock.GetComponent<Rigidbody2D>().MovePosition((pos* Time.fixedDeltaTime) + objPos);
             
         
         }

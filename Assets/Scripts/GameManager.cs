@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     }
     private bool isGrounded()
     {
-        return (currentBlock.GetComponent<Rigidbody2D>().IsTouchingLayers(LayerMask.GetMask("Block")));
+        return (currentBlock.GetComponent<Rigidbody2D>().IsTouchingLayers(LayerMask.GetMask("Ground")));
     
     }
     // Update is called once per frame
