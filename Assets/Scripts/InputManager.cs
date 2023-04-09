@@ -16,6 +16,17 @@ public class InputManager : MonoBehaviour
             PlayerController.Instance.PlayerDirection = Vector2.zero;
         }
     }
+    public void OnDown(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            PlayerController.Instance.PlayerDirectionY = context.ReadValue<Vector2>().y;
+        }
+        if(context.canceled)
+        {
+            PlayerController.Instance.PlayerDirectionY = 0f;
+        }
+    }
     public void OnPause(InputAction.CallbackContext context)
     {
         if(context.performed)
